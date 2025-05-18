@@ -1,4 +1,4 @@
-import { Button, Dimensions, Image, StyleSheet, Text, View } from 'react-native';
+import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
 import { useRouter } from "expo-router";
@@ -6,8 +6,8 @@ import { useRouter } from "expo-router";
 export default function HomeScreen() {
 
     const router = useRouter();
-    const { width } = Dimensions.get("window");
-    const moveString = "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3";
+    
+    const moveString = "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 d6 c3 O-O h3 Nb8 d4 Nbd7 c4 c6 Nc3 Qc7 Bg5 h6 Bh4 Re8 Rc1 Bf8 cxb5 axb5 Nxb5 Qb6 Nc3 exd4 Nxd4 Bb7 Nf5 Qb4 a3 Qa5 Ba2 d5 exd5 Rxe1+ Qxe1 cxd5 b4 Qxa3 Ra1 Qxb4 Rb1 Qa5 Rxb7 Bb4 Bxf6 Nxf6 Qe5 Re8 Qc7 Qxc7 Rxc7 Re1+ Kh2 Bxc3 Rxc3 Re2 Bb1 g6 Rc8+ Kg7 f3 Rb2 Bd3 Nh5 Rc2 Rb3 Bf1 Rb1 Bd3 Nf4 Ba6 d4 Kg3 d3 Rd2 g5 Bxd3 h5 Bc4 h4+ Kg4 Kg6 Bd5 f5#";
 
     const styles = StyleSheet.create({
         body: {

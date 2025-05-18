@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Dimensions, StyleSheet, Text, View } from "react-native";
 
 interface BaseProps {
     white: boolean;
@@ -13,31 +13,34 @@ interface SquareProps extends RowProps {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "row",
-  },
+    container: {
+        flex: 1,
+        flexDirection: "row",
+    },
 });
 
 const WHITE = "rgb(100, 133, 68)";
 const BLACK = "rgb(230, 233, 198)";
 
-export const Square = ({row, col, white}: SquareProps) => {
+export const Square = ({ row, col, white }: SquareProps) => {
+    const { width } = Dimensions.get("window");
+    const squareSize = (width - 15) / 8;
+
     const backgroundColor = white ? WHITE : BLACK;
     return (
         <View
-            style = {{
+            style={{
                 flex: 1,
-                backgroundColor, 
+                backgroundColor,
                 display: "flex",
-                justifyContent: "space-between"               
+                justifyContent: "space-between"
             }}
-        > 
-            <Text style={{opacity: col === 0 ? 1 : 0}}>
+        >
+            <Text style={{ opacity: col === 0 ? 1 : 0, position: "relative", left: -8, top: (squareSize / 2 - 9), fontSize: 15 }}>
                 {8 - row}
-            </Text>        
-            { (row === 7) && 
-                <Text style={{alignSelf: "flex-end"}}>
+            </Text>
+            {(row === 7) &&
+                <Text style={{ position: "relative", left: (squareSize / 2 - 4.5), top: 15 }}>
                     {String.fromCharCode(col + 97)}
                 </Text>
             }

@@ -2,16 +2,16 @@ import React from "react";
 import { Dimensions, Image, StyleSheet, View } from "react-native";
 import BackGround from "./background";
 
-const pieceImages: Record<string, any> = {
+export const pieceImages: Record<string, any> = {
     wp: require("../../assets/chesspieces/wp.png"),
     wr: require("../../assets/chesspieces/wr.png"),
-    wn: require("../../assets/chesspieces/wk.png"),
+    wn: require("../../assets/chesspieces/wn.png"),
     wb: require("../../assets/chesspieces/wb.png"),
     wq: require("../../assets/chesspieces/wq.png"),
     wk: require("../../assets/chesspieces/wk.png"),
     bp: require("../../assets/chesspieces/bp.png"),
     br: require("../../assets/chesspieces/br.png"),
-    bn: require("../../assets/chesspieces/bk.png"),
+    bn: require("../../assets/chesspieces/bn.png"),
     bb: require("../../assets/chesspieces/bb.png"),
     bq: require("../../assets/chesspieces/bq.png"),
     bk: require("../../assets/chesspieces/bk.png"),
@@ -23,7 +23,7 @@ const pieceImages: Record<string, any> = {
 
 const Chessboard = ({ fen }: { fen: string }) => {
     const { width } = Dimensions.get("window");
-    const boardSize = (width / 4) * 3;
+    const boardSize = width - 15;
     const squareSize = boardSize / 8;
     const rows = fen.split(" ")[0].split("/");
 

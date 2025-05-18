@@ -1,0 +1,30 @@
+Simülasyonun üstüne isim 
+
+Arkaplana renk ekleme masa rengi
+
+Arkaplana resim ekleme
+
+İleri geri butonu
+
+Ekranın widthi - 10px olsun boyutu
+
+Şah çekme uyarısı
+
+Beyazın yediği taşlar 
+
+Siyahın yediği taşlar
+
+Model tahmin
+
+Rakamlar boardun biraz dışı mda gözüksün
+
+Oyun bitince uyarı versin
+
+Sıradaki hamlelerin ve geçmiş hamlelerin gösterildiği bi string de koy
+
+Detected game kısmı tablo şeklinde gözüksün
+
+Sıralı şekilde olsun take photo ve go simulate 
+
+Model tahmin ettikten kim beyaz kim siyah onunda soralım
+ 
